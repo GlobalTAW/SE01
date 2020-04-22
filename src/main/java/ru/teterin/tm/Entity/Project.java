@@ -1,4 +1,4 @@
-package Entity;
+package ru.teterin.tm.Entity;
 
 public class Project {
     private String name;

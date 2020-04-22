@@ -1,16 +1,15 @@
-package manager;
+package ru.teterin.tm.manager;
 
-import Entity.Project;
+import ru.teterin.tm.Entity.Project;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class ProjectManager {
-    private List<Project> projects= new ArrayList<Project>();
+    private List<Project> projects= new ArrayList<>();
     //Удаление всех проектов
     public void clearProjects(){
         Iterator<Project> iterator = projects.iterator();
@@ -29,7 +28,7 @@ public class ProjectManager {
     }
     //Вывод списка проектов
     public void getProjectsList(){
-        System.out.println("[PROJECT LIST");
+        System.out.println("[PROJECT LIST]");
         int projectNumber =1;
         for(Project project:projects){
             System.out.println(projectNumber+". "+project.getName());
@@ -49,6 +48,27 @@ public class ProjectManager {
                 iterator.remove();
                 hasProject=true;
                 System.out.println("[PROJECT REMOVED]\n");
+                break;
+            }
+        }
+        if(!hasProject){
+            System.out.println("[PROJECT NOT FOUND]\n");
+        }
+    }
+    // Редактировать проект
+    public void editProject(BufferedReader reader) throws  IOException{
+        System.out.println("[PROJECT EDIT]\nENTER PROJECT NAME");
+        String name = reader.readLine();
+        Iterator<Project> iterator = projects.iterator();
+        boolean hasProject = false;
+        while(iterator.hasNext()){
+            Project project = iterator.next();
+            if(project.getName().equals(name)){
+                hasProject=true;
+                System.out.println("[ENTER NEW NAME]");
+                project.setName(reader.readLine());
+                System.out.println("[PROJECT EDITED]\n");
+                break;
             }
         }
         if(!hasProject){
