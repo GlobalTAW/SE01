@@ -1,6 +1,6 @@
-package ru.teterin.tm.Entity;
+package ru.teterin.tm.entity;
 
-public class Help {
+public class Helper {
     private static final String helpMessage = "help: Show all commands.\n" +
             "project_clear: Remove all projects.\n" +
             "project_create: Create new project.\n" +

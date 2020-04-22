@@ -1,4 +1,4 @@
-package ru.teterin.tm.Entity;
+package ru.teterin.tm.entity;
 
 public enum Command {
     HELP,

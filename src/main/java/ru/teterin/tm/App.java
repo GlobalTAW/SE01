@@ -1,7 +1,7 @@
 package ru.teterin.tm;
 
-import ru.teterin.tm.Entity.Command;
-import ru.teterin.tm.Entity.Help;
+import ru.teterin.tm.entity.Command;
+import ru.teterin.tm.entity.Helper;
 import ru.teterin.tm.manager.ProjectManager;
 import ru.teterin.tm.manager.TaskManager;
 
@@ -29,7 +29,7 @@ public class App {
                     System.out.println("[COMMAND NOT FOUND]\n");
                     break;
                 case HELP:
-                    Help.getHelpMessage();
+                    Helper.getHelpMessage();
                     break;
                 case PROJECT_CLEAR:
                     projectManager.clearProjects();

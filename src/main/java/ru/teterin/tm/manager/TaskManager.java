@@ -1,6 +1,6 @@
 package ru.teterin.tm.manager;
 
-import ru.teterin.tm.Entity.Task;
+import ru.teterin.tm.entity.Task;
 
 import java.io.BufferedReader;
 import java.io.IOException;
