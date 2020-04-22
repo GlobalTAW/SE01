@@ -11,9 +11,9 @@ public class App {
             String command=reader.readLine();
 
             break;
-            }
+        }
         reader.close();
 
-        }
-
     }
+
+}
