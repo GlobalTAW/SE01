@@ -8,6 +8,11 @@
     <artifactId>SE01</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <name>Alexei Teterin</name>
+        </developer>
+    </developers>
     <build>
         <plugins>
             <plugin>
